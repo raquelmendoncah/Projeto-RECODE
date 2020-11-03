@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="./CSS/estilo.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"> <img src="./Imagens/Full Stack Eletro.jpeg" alt="Logo"></a>
-        <a href="produtos.html"> Produtos </a>
-        <a href="lojas.html"> Lojas </a>
-        <a href="faleconosco.html"> Fale Conosco</a>        
-    </header>
+    <?php
+        include('menu.php');    
+    ?>
     <main class="mainLojas">
        <section>
            <h3>Rio de Janeiro</h3>
@@ -36,11 +33,9 @@
        </section> 
 
     </main>
-    <footer>
-        <p> Formas de pagamento </p>
-        <img src="./Imagens/Formas de pagamento.jpeg" alt="Cartões">
-        <p> &#169; Recode Pro 2020 </p>
-    </footer>
+    <?php
+        include('rodape.php');    
+    ?>
        
 </body>
 </html>
