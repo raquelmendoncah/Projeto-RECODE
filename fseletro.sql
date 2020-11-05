@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Out-2020 às 22:37
+-- Tempo de geração: 05-Nov-2020 às 15:17
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `fseletro`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) DEFAULT NULL,
+  `msg` varchar(300) DEFAULT NULL,
+  `data` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `comentarios`
+--
+
+INSERT INTO `comentarios` (`id`, `nome`, `msg`, `data`) VALUES
+(1, 'Raquel', 'Olá mundo\"', '2020-11-03 15:28:06'),
+(2, 'Nayara', 'BD Senior', '2020-11-03 15:59:48');
 
 -- --------------------------------------------------------
 
@@ -74,6 +95,12 @@ INSERT INTO `produto` (`id_produto`, `categoria`, `descricao`, `imagem`, `preco`
 --
 
 --
+-- Índices para tabela `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `produto`
 --
 ALTER TABLE `produto`
@@ -82,6 +109,12 @@ ALTER TABLE `produto`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
